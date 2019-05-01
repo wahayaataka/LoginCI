@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Tambah Data</h1>
+    <h5>
+    <?php
+        echo validation_errors();
+     ?>
+    </h5>
+    <table>
+      <form action="http://localhost/bukuCI/Buku/tambah_proses" method="post">
+        <tr>
+          <td> <label>Judul</label> </td>
+          <td>:</td>
+          <td><input type="text" name="judul" value="<?= $this->form_validation->set_value('judul'); ?>"></td>
+          <!-- <td><?php echo form_error('judul'); ?></td> -->
+        </tr>
+        <tr>
+          <td> <label>Penulis</label> </td>
+          <td>:</td>
+          <td><input type="text" name="penulis" value="<?= $this->form_validation->set_value('penulis'); ?>"></td>
+        </tr>
+        <tr>
+          <td> <label>Tahun Terbit</label> </td>
+          <td>:</td>
+          <td><input type="text" name="tahun_terbit" value="<?= $this->form_validation->set_value('tahun_terbit'); ?>"></td>
+        </tr>
+        <tr>
+          <td> <label>Harga</label> </td>
+          <td>:</td>
+          <td><input type="text" name="harga" value="<?= $this->form_validation->set_value('harga'); ?>"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td> <button type="submit" name="simpan">Simpan</button> </td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>
